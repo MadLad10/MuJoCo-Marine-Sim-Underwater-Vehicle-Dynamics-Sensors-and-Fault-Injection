@@ -1,4 +1,4 @@
-# MuJoCo Marine Sim
+# MuJoCo Marine Sim: Underwater Vehicle Dynamics, Sensors and Fault Injection
 
 A configurable underwater robot simulator for testing vehicle dynamics, simulated sensors, sensor failures and perception data generation in a repeatable pool environment.
 
@@ -187,6 +187,14 @@ uv build
 The latest recorded local verification passed **27 tests**, including a second run against a wheel installed in an isolated environment outside the source directory. Tests cover dynamics, sensor payloads, all fault types, referee events, sonar annotations, seeded rollouts, CLI behavior, automatic camera labels and packaged configuration lookup. Four GIFs containing 84 recorded frames were also decoded and checked.
 
 The [local verification receipt](docs/verification.json) records the tested versions and artifacts. The [GitHub Actions workflow](.github/workflows/tests.yml) is configured for Python 3.10 and 3.12 with OSMesa; remote CI execution has not been verified in that receipt.
+
+## Application compatibility
+
+The standalone wheel also passed **54 Agentic AUV compatibility checks**: 52 core checks covering sensors, faults, estimation, tracking and mission execution; one YOLO check on a rendered camera image; and one ROS 2 vehicle-action test. All final suites passed with no failures, errors or skips. Import and resource checks verified that the isolated installation supplied the simulator and its packaged YAML.
+
+[Application compatibility report, provenance and reproduction instructions](https://github.com/MadLad10/Agentic-AUV-multimodal-multi-agent-autonomy-for-an-underwater-robot/blob/main/eval/results/standalone_sim_step2_20261027/README.md).
+
+This run used the application's MuJoCo 3.16.0 and NumPy 1.26.4. The package verification above used the separate versions recorded in its receipt. The application still uses its internal simulator in its normal environment; adopting this package as its normal dependency remains a separate migration step.
 
 ## Repository layout
 
