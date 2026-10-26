@@ -1,0 +1,227 @@
+{
+  "scope": "Standalone marine simulator release; simulator component and its own examples/tests/docs",
+  "files": [
+    {
+      "path": ".github/workflows/tests.yml",
+      "bytes": 1132,
+      "sha256": "f09e7f6dc6e22a493affa6625f6d8d3fcc18a984450cc8540771d47b3fb58897"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 153,
+      "sha256": "d96c9529e72365f89f4ba8fa173da9fdc4c3172a4c3c60155aff68e97b226736"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1073,
+      "sha256": "3720dac3a63c97c891c522ccd529a4f284f9e1c2b1ff49402244ae502b0a8cef"
+    },
+    {
+      "path": "MANIFEST.in",
+      "bytes": 158,
+      "sha256": "7b96e2a0249890d1f997dcece9d46614e4ac0380342d6e7a4de1c80001b38f38"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6234,
+      "sha256": "beb562468955f657500b4b977324da3aeece61a066efe4a0bbad875d87c2743d"
+    },
+    {
+      "path": "docs/DEMOS.md",
+      "bytes": 1673,
+      "sha256": "0278cc1c99946fa9b8889596c219ff22725bad37b5d7a40fbec9ca40a1ee3e45"
+    },
+    {
+      "path": "docs/EXTRACTION.md",
+      "bytes": 1194,
+      "sha256": "6aac96c410f54765c32d4f1559472675db2bb771805b8d1e768ea41cf3620b9c"
+    },
+    {
+      "path": "docs/demo_verification.json",
+      "bytes": 8201,
+      "sha256": "45e88472dbd0a08e9e3e2f3ee90b68a73b96feb174a3f9d61e81e3a0d61d02df"
+    },
+    {
+      "path": "docs/extraction_source.json",
+      "bytes": 1487,
+      "sha256": "247f87b2827e9126afdb04483a1f89969e6a45ab466bf6a2512a08fdc006b8cb"
+    },
+    {
+      "path": "docs/media/camera_blackout.gif",
+      "bytes": 1127439,
+      "sha256": "0d339c41fd07964f37e885c908b6817cf65055c644b4f818aaa63c43345cb0a4"
+    },
+    {
+      "path": "docs/media/camera_blackout.png",
+      "bytes": 63892,
+      "sha256": "68b0cc73f53830882e684e8394ad362595440b712896e7f7f74e0850cfa7061f"
+    },
+    {
+      "path": "docs/media/camera_blackout_front.png",
+      "bytes": 972,
+      "sha256": "441da7236f6ffdd8fb4cdfa2d9ce7b8d8df8cf2f7a8e82c530714d92266ce613"
+    },
+    {
+      "path": "docs/media/camera_blackout_sonar.png",
+      "bytes": 46288,
+      "sha256": "45ebfc30f2d6781488f9685b66aa1f6a4e810221446e872d8439fa8657172069"
+    },
+    {
+      "path": "docs/media/dvl_dropout.gif",
+      "bytes": 2114770,
+      "sha256": "b77ccc98fc83ccaba2bc66c390afafe87e7b11945f65947aef2cc1c17821602f"
+    },
+    {
+      "path": "docs/media/dvl_dropout.png",
+      "bytes": 160555,
+      "sha256": "22e66dc6430e67425d11ae5d7c659fc4af36b44e108670abac001581550b41d8"
+    },
+    {
+      "path": "docs/media/dvl_dropout_front.png",
+      "bytes": 528084,
+      "sha256": "d5230b7d223385f63e4a8b52c5084a448a3d567113d05ff16582d03f16b99aa0"
+    },
+    {
+      "path": "docs/media/dvl_dropout_sonar.png",
+      "bytes": 46073,
+      "sha256": "1793a6ece9ab2d997100457f71296a262d8019f4e7e178d5c4978c9b32ee9367"
+    },
+    {
+      "path": "docs/media/nominal.gif",
+      "bytes": 2114535,
+      "sha256": "4fc714819021fca618a84800e5024ecde9937804308b588b836a2072bc376efa"
+    },
+    {
+      "path": "docs/media/nominal.png",
+      "bytes": 160522,
+      "sha256": "969ca20d1a29b7d9303ea1d4ff347c91c543837d10abff80633057694b3aecd4"
+    },
+    {
+      "path": "docs/media/nominal_front.png",
+      "bytes": 528140,
+      "sha256": "fa239f1605ac0a565797eb802639a24d89fc75b7c74dd961fedce9a75bd5a8c9"
+    },
+    {
+      "path": "docs/media/nominal_sonar.png",
+      "bytes": 46131,
+      "sha256": "dcc7618fb2e219f7ec15c1a4f3ab69620ad429b790a92a83b7ac76ece1ca24d4"
+    },
+    {
+      "path": "docs/media/turbidity.gif",
+      "bytes": 2690573,
+      "sha256": "946da042933f03705d3c534c5f35b93b37913967cf80a25e4b226ab31387afce"
+    },
+    {
+      "path": "docs/media/turbidity.png",
+      "bytes": 160163,
+      "sha256": "9cd5d1d9a547bdc8565c18f8bdfadd947e5427c026670061c3e0805af83b8d88"
+    },
+    {
+      "path": "docs/media/turbidity_front.png",
+      "bytes": 527602,
+      "sha256": "6f7f74b285dc589394219d2d6dbf71964e39d19703d7264b39eb368902c910fa"
+    },
+    {
+      "path": "docs/media/turbidity_sonar.png",
+      "bytes": 46131,
+      "sha256": "dcc7618fb2e219f7ec15c1a4f3ab69620ad429b790a92a83b7ac76ece1ca24d4"
+    },
+    {
+      "path": "docs/verification.json",
+      "bytes": 2076,
+      "sha256": "677dc9b9510d6b281f8c7e5f11aebe64dcfceb9cce03a1c16d26bcd1d7789646"
+    },
+    {
+      "path": "examples/basic.py",
+      "bytes": 486,
+      "sha256": "0bdef7e63079d3ff1d42f6975c228b14033d4957b2280cf1b1847b926370e139"
+    },
+    {
+      "path": "examples/fault_schedule.yaml",
+      "bytes": 246,
+      "sha256": "7ba1257022c2aa1806e131f742318a8dfb26e5c1aa2cbf4b095e4abba656d779"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 889,
+      "sha256": "379f84de8aa795a926e6d9a2a3ade1909403cd3a26c08666abc27101ac6f788c"
+    },
+    {
+      "path": "src/auv_marine_sim/__init__.py",
+      "bytes": 556,
+      "sha256": "a4cd3c942c69e6c8aaa3542fa6af83581cc31052ed4d8e9012202a3ee3dfa3a0"
+    },
+    {
+      "path": "src/auv_marine_sim/__main__.py",
+      "bytes": 79,
+      "sha256": "bd045ddd5242d002f692dac452be9afba38deef5cde541a5fc074bfef5987b91"
+    },
+    {
+      "path": "src/auv_marine_sim/autolabel.py",
+      "bytes": 10094,
+      "sha256": "8718260eb9caf2742bdf32e021d848f9d518fdbdcc973a6ea7095fb50c5a3feb"
+    },
+    {
+      "path": "src/auv_marine_sim/cli.py",
+      "bytes": 9590,
+      "sha256": "0f5780d275d9cd4f8c231b71789b9a958102bfed47250380d483379364c635a5"
+    },
+    {
+      "path": "src/auv_marine_sim/config/arenas/buoy_hidden.yaml",
+      "bytes": 650,
+      "sha256": "e6b69d36090151186f5c53d8e9a8a5f6eb6d5cea3b9f27896171af821cdf0605"
+    },
+    {
+      "path": "src/auv_marine_sim/config/arenas/default.yaml",
+      "bytes": 668,
+      "sha256": "8bc4d3fcd0f3993bf312d0e63673d7e68915f63a94bcc93e053aa86074c778ff"
+    },
+    {
+      "path": "src/auv_marine_sim/config/sim.yaml",
+      "bytes": 3231,
+      "sha256": "d6b050f9bffddd923bd5b7bb774b21b5fb56595de5e2602613ebc68206d3b8a9"
+    },
+    {
+      "path": "src/auv_marine_sim/faults.py",
+      "bytes": 3291,
+      "sha256": "47e614f48ce0fdcc9d489377a685dd6155aa59c2729641a3182b4d965d9c5e67"
+    },
+    {
+      "path": "src/auv_marine_sim/referee.py",
+      "bytes": 5595,
+      "sha256": "205325f655d4b86bf40649a5e6dc8f2b93f4b87932448ea16aea7319d5ace45c"
+    },
+    {
+      "path": "src/auv_marine_sim/sim.py",
+      "bytes": 26852,
+      "sha256": "e82e5d071c612e02b561909980511db37aa4465fa92d5bd625606fd991b688e6"
+    },
+    {
+      "path": "src/auv_marine_sim/sonar_image.py",
+      "bytes": 4898,
+      "sha256": "cfc1704099ef9cb13d95b0ab086f9644b02b3beeacd6860b523336447a0de081"
+    },
+    {
+      "path": "src/auv_marine_sim/world.py",
+      "bytes": 8921,
+      "sha256": "8c85e7a8025aebef2f8f111daf90663737370ccd218c0e6253747577b459114b"
+    },
+    {
+      "path": "tests/test_autolabel.py",
+      "bytes": 1295,
+      "sha256": "2af902d14377f73b3c20d1b15586cc9f474f4788573ca4505c1562fde2b203ea"
+    },
+    {
+      "path": "tests/test_marine_sim.py",
+      "bytes": 7155,
+      "sha256": "46f8b65ecac38ace1ba737551890e922e7fcac85b8c4f8b2bdcd6c2cf909944a"
+    },
+    {
+      "path": "tests/test_standalone.py",
+      "bytes": 3652,
+      "sha256": "e168aecb0e3031fdf33e804699573fbf8d464ba5cb4d6796a258887aec0c9000"
+    }
+  ],
+  "total_bytes": 10473399,
+  "self_hash_excluded": true
+}

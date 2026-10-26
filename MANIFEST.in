@@ -1,0 +1,5 @@
+include README.md LICENSE
+include docs/extraction_source.json
+recursive-include examples *.py *.yaml
+recursive-include tests *.py
+recursive-include docs *.md

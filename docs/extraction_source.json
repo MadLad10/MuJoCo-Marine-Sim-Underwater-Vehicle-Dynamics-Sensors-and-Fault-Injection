@@ -1,0 +1,19 @@
+{
+  "source_repository": "MadLad10/Agentic-AUV-multimodal-multi-agent-autonomy-for-an-underwater-robot",
+  "source_commit": "d6b7d1c88b39c90d543e80858e9e926ab2861230",
+  "source_component": "src/auv_marine_sim",
+  "source_sha256": {
+    "auv_marine_sim/__init__.py": "63820e3bdf0ec251c9ad7147eec17d0fe00d5ab001c9f765fcaa5b7f34a0cd33",
+    "auv_marine_sim/autolabel.py": "8718260eb9caf2742bdf32e021d848f9d518fdbdcc973a6ea7095fb50c5a3feb",
+    "auv_marine_sim/faults.py": "47e614f48ce0fdcc9d489377a685dd6155aa59c2729641a3182b4d965d9c5e67",
+    "auv_marine_sim/referee.py": "205325f655d4b86bf40649a5e6dc8f2b93f4b87932448ea16aea7319d5ace45c",
+    "auv_marine_sim/sim.py": "e82e5d071c612e02b561909980511db37aa4465fa92d5bd625606fd991b688e6",
+    "auv_marine_sim/sonar_image.py": "cfc1704099ef9cb13d95b0ab086f9644b02b3beeacd6860b523336447a0de081",
+    "auv_marine_sim/world.py": "6068d7d1eed1722b789553faf6778bdd27cef1ed1b9b64958874bab7ee84c1d9",
+    "config/arenas/buoy_hidden.yaml": "e6b69d36090151186f5c53d8e9a8a5f6eb6d5cea3b9f27896171af821cdf0605",
+    "config/arenas/default.yaml": "8bc4d3fcd0f3993bf312d0e63673d7e68915f63a94bcc93e053aa86074c778ff",
+    "config/sim.yaml": "d6b050f9bffddd923bd5b7bb774b21b5fb56595de5e2602613ebc68206d3b8a9",
+    "test/test_marine_sim.py": "46f8b65ecac38ace1ba737551890e922e7fcac85b8c4f8b2bdcd6c2cf909944a"
+  },
+  "scope": "Standalone packaging of the existing marine simulator; integration agents, mission planner and navigation are separate components"
+}

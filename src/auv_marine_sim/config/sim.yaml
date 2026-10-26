@@ -1,0 +1,86 @@
+# MuJoCo marine simulator configuration. World frame: x forward along the pool, y left, z up,
+# z = 0 at the water surface, depth = -z. All noise and failure parameters live here.
+physics:
+  timestep: 0.005            # s, MuJoCo step
+  control_dt: 0.05           # s, controller / guidance / sensor tick (20 Hz)
+  water_density: 1000.0
+  gravity: 9.81
+  current: [0.0, 0.0, 0.0]   # m/s, world-frame water current (drag is relative to the water)
+
+vehicle:
+  hull: [0.5, 0.3, 0.2]      # box (m) -> displaced volume 0.03 m^3 (buoyancy 294 N)
+  mass: 29.7                 # kg -> weight 291 N -> ~3 N net positive buoyancy (floats when idle)
+  com: [0.0, 0.0, -0.04]     # centre of mass below the centre of buoyancy -> righting moment
+  # v1 hydrodynamics (Fortress Hydrodynamics plugin), body frame [u, v, w, p, q, r]
+  damping_linear: [10.0, 15.0, 15.0, 2.0, 3.0, 3.0]
+  damping_quadratic: [30.0, 45.0, 45.0, 3.0, 5.0, 5.0]
+  max_thrust_n: 40.0
+  thruster_tau_s: 0.1        # first-order thrust lag
+  # name: [x, y, z, dir_x, dir_y, dir_z]  (body frame, thrust direction for positive command)
+  thrusters:
+    surge_left:  [-0.25,  0.17,  0.00, 1, 0, 0]
+    surge_right: [-0.25, -0.17,  0.00, 1, 0, 0]
+    heave_front: [ 0.18,  0.00,  0.12, 0, 0, 1]
+    heave_back:  [-0.18,  0.00,  0.12, 0, 0, 1]
+    sway_front:  [ 0.18,  0.00, -0.12, 0, 1, 0]
+    sway_back:   [-0.18,  0.00, -0.12, 0, 1, 0]
+  current_coeff: 0.04        # A per N^1.5 (thruster telemetry current model: 40 N -> ~10 A)
+
+sensors:
+  camera:
+    width: 640
+    height: 480
+    hfov_deg: 80.0
+    offset: [0.26, 0.0, 0.0]
+    visibility_m: 9.0           # clear-water visibility (m)
+    water_rgb: [0.05, 0.22, 0.30]   # backscatter (water) colour
+    channel_attenuation: [1.3, 1.0, 0.9]   # relative absorption R, G, B (red fades first)
+    extinction_k: 1.8        # T = exp(-k * range / visibility): ~16% transmission at the visibility range
+    noise_std: 4.0           # pixel noise (0..255)
+  sonar:                     # forward-looking imaging sonar, ray-cast fan
+    rate_hz: 2.0
+    hfov_deg: 120.0
+    beams: 81
+    elevations_deg: [-10.0, -5.0, 0.0, 5.0, 10.0]
+    max_range_m: 15.0
+    range_noise_m: 0.05
+    p_miss: 0.05             # per-beam missed return
+    offset: [0.2, 0.0, -0.08]
+    image:                   # FLS fan image (sonar_image.py)
+      range_bins: 256
+      height: 256
+      width: 448
+      speckle: 1.0           # multiplicative Rayleigh speckle (mean 1)
+      noise_floor: 0.03      # additive Rayleigh noise
+      gain: 1.6
+  dvl:
+    rate_hz: 5.0
+    beam_angle_deg: 30.0
+    max_range_m: 30.0
+    min_altitude_m: 0.3
+    vel_noise_mps: 0.01
+    scale_error: 0.002
+  imu:
+    rate_hz: 20.0
+    gyro_noise: 0.002        # rad/s
+    gyro_bias_walk: 0.00002  # rad/s per sqrt(s)
+    accel_noise: 0.03        # m/s^2
+    attitude_noise_deg: 0.3  # AHRS roll/pitch
+  compass:
+    rate_hz: 10.0
+    noise_deg: 1.5
+  pressure:
+    rate_hz: 10.0
+    noise_m: 0.005
+  battery:
+    capacity_wh: 20.0
+    hotel_w: 20.0
+    w_per_newton: 1.2
+    initial_percent: 100.0
+  thruster_telemetry:
+    rate_hz: 10.0
+  leak:
+    rate_hz: 1.0
+
+render:
+  spectator: [6.0, -11.5, 1.2]   # media camera on the pool side (looks across the course)

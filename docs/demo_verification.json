@@ -1,0 +1,370 @@
+{
+  "valid": true,
+  "mode": "passive buoyancy and fault visualization",
+  "mujoco_version": "3.17.0",
+  "scenarios": [
+    {
+      "scenario": "nominal",
+      "seed": 0,
+      "frame_times_s": [
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0
+      ],
+      "frames": 21,
+      "gif_fps": 10.0,
+      "fault_schedule": [],
+      "fault_events": [],
+      "final_dvl_valid": true,
+      "front_final_max": 111,
+      "final_truth_position_m": [
+        3.0,
+        0.0,
+        -1.3628397353579738
+      ],
+      "referee": {
+        "events": [],
+        "gate_passed": false,
+        "buoys_touched": [],
+        "touch_order": [],
+        "surfaced": false,
+        "surfaced_at_end": false,
+        "max_depth_m": 1.5,
+        "boundary_contacts": 0,
+        "collisions": 0,
+        "path_length_m": 0.1,
+        "final": {
+          "x": 3.0,
+          "y": 0.0,
+          "depth": 1.36
+        },
+        "localisation": {},
+        "sim_time_s": 2.0
+      }
+    },
+    {
+      "scenario": "turbidity",
+      "seed": 0,
+      "frame_times_s": [
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0
+      ],
+      "frames": 21,
+      "gif_fps": 10.0,
+      "fault_schedule": [
+        {
+          "type": "turbidity",
+          "t_start": 0.5,
+          "duration": null,
+          "params": {
+            "visibility_m": 2.0
+          }
+        }
+      ],
+      "fault_events": [
+        {
+          "t": 0.5,
+          "event": "onset",
+          "type": "turbidity",
+          "t_start": 0.5,
+          "duration": null,
+          "params": {
+            "visibility_m": 2.0
+          }
+        }
+      ],
+      "final_dvl_valid": true,
+      "front_final_max": 95,
+      "final_truth_position_m": [
+        3.0,
+        0.0,
+        -1.3628397353579738
+      ],
+      "referee": {
+        "events": [],
+        "gate_passed": false,
+        "buoys_touched": [],
+        "touch_order": [],
+        "surfaced": false,
+        "surfaced_at_end": false,
+        "max_depth_m": 1.5,
+        "boundary_contacts": 0,
+        "collisions": 0,
+        "path_length_m": 0.1,
+        "final": {
+          "x": 3.0,
+          "y": 0.0,
+          "depth": 1.36
+        },
+        "localisation": {},
+        "sim_time_s": 2.0
+      }
+    },
+    {
+      "scenario": "camera_blackout",
+      "seed": 0,
+      "frame_times_s": [
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0
+      ],
+      "frames": 21,
+      "gif_fps": 10.0,
+      "fault_schedule": [
+        {
+          "type": "camera_blackout",
+          "t_start": 0.5,
+          "duration": null,
+          "params": {}
+        }
+      ],
+      "fault_events": [
+        {
+          "t": 0.5,
+          "event": "onset",
+          "type": "camera_blackout",
+          "t_start": 0.5,
+          "duration": null,
+          "params": {}
+        }
+      ],
+      "final_dvl_valid": true,
+      "front_final_max": 0,
+      "final_truth_position_m": [
+        3.0,
+        0.0,
+        -1.3628397353579738
+      ],
+      "referee": {
+        "events": [],
+        "gate_passed": false,
+        "buoys_touched": [],
+        "touch_order": [],
+        "surfaced": false,
+        "surfaced_at_end": false,
+        "max_depth_m": 1.5,
+        "boundary_contacts": 0,
+        "collisions": 0,
+        "path_length_m": 0.1,
+        "final": {
+          "x": 3.0,
+          "y": 0.0,
+          "depth": 1.36
+        },
+        "localisation": {},
+        "sim_time_s": 2.0
+      }
+    },
+    {
+      "scenario": "dvl_dropout",
+      "seed": 0,
+      "frame_times_s": [
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0
+      ],
+      "frames": 21,
+      "gif_fps": 10.0,
+      "fault_schedule": [
+        {
+          "type": "dvl_dropout",
+          "t_start": 0.5,
+          "duration": null,
+          "params": {}
+        }
+      ],
+      "fault_events": [
+        {
+          "t": 0.5,
+          "event": "onset",
+          "type": "dvl_dropout",
+          "t_start": 0.5,
+          "duration": null,
+          "params": {}
+        }
+      ],
+      "final_dvl_valid": false,
+      "front_final_max": 115,
+      "final_truth_position_m": [
+        3.0,
+        0.0,
+        -1.3628397353579738
+      ],
+      "referee": {
+        "events": [],
+        "gate_passed": false,
+        "buoys_touched": [],
+        "touch_order": [],
+        "surfaced": false,
+        "surfaced_at_end": false,
+        "max_depth_m": 1.5,
+        "boundary_contacts": 0,
+        "collisions": 0,
+        "path_length_m": 0.1,
+        "final": {
+          "x": 3.0,
+          "y": 0.0,
+          "depth": 1.36
+        },
+        "localisation": {},
+        "sim_time_s": 2.0
+      }
+    }
+  ],
+  "recorded_frames": 84,
+  "media_files": [
+    {
+      "path": "docs/media/nominal.gif",
+      "bytes": 2114535,
+      "sha256": "4fc714819021fca618a84800e5024ecde9937804308b588b836a2072bc376efa"
+    },
+    {
+      "path": "docs/media/nominal.png",
+      "bytes": 160522,
+      "sha256": "969ca20d1a29b7d9303ea1d4ff347c91c543837d10abff80633057694b3aecd4"
+    },
+    {
+      "path": "docs/media/nominal_front.png",
+      "bytes": 528140,
+      "sha256": "fa239f1605ac0a565797eb802639a24d89fc75b7c74dd961fedce9a75bd5a8c9"
+    },
+    {
+      "path": "docs/media/nominal_sonar.png",
+      "bytes": 46131,
+      "sha256": "dcc7618fb2e219f7ec15c1a4f3ab69620ad429b790a92a83b7ac76ece1ca24d4"
+    },
+    {
+      "path": "docs/media/turbidity.gif",
+      "bytes": 2690573,
+      "sha256": "946da042933f03705d3c534c5f35b93b37913967cf80a25e4b226ab31387afce"
+    },
+    {
+      "path": "docs/media/turbidity.png",
+      "bytes": 160163,
+      "sha256": "9cd5d1d9a547bdc8565c18f8bdfadd947e5427c026670061c3e0805af83b8d88"
+    },
+    {
+      "path": "docs/media/turbidity_front.png",
+      "bytes": 527602,
+      "sha256": "6f7f74b285dc589394219d2d6dbf71964e39d19703d7264b39eb368902c910fa"
+    },
+    {
+      "path": "docs/media/turbidity_sonar.png",
+      "bytes": 46131,
+      "sha256": "dcc7618fb2e219f7ec15c1a4f3ab69620ad429b790a92a83b7ac76ece1ca24d4"
+    },
+    {
+      "path": "docs/media/camera_blackout.gif",
+      "bytes": 1127439,
+      "sha256": "0d339c41fd07964f37e885c908b6817cf65055c644b4f818aaa63c43345cb0a4"
+    },
+    {
+      "path": "docs/media/camera_blackout.png",
+      "bytes": 63892,
+      "sha256": "68b0cc73f53830882e684e8394ad362595440b712896e7f7f74e0850cfa7061f"
+    },
+    {
+      "path": "docs/media/camera_blackout_front.png",
+      "bytes": 972,
+      "sha256": "441da7236f6ffdd8fb4cdfa2d9ce7b8d8df8cf2f7a8e82c530714d92266ce613"
+    },
+    {
+      "path": "docs/media/camera_blackout_sonar.png",
+      "bytes": 46288,
+      "sha256": "45ebfc30f2d6781488f9685b66aa1f6a4e810221446e872d8439fa8657172069"
+    },
+    {
+      "path": "docs/media/dvl_dropout.gif",
+      "bytes": 2114770,
+      "sha256": "b77ccc98fc83ccaba2bc66c390afafe87e7b11945f65947aef2cc1c17821602f"
+    },
+    {
+      "path": "docs/media/dvl_dropout.png",
+      "bytes": 160555,
+      "sha256": "22e66dc6430e67425d11ae5d7c659fc4af36b44e108670abac001581550b41d8"
+    },
+    {
+      "path": "docs/media/dvl_dropout_front.png",
+      "bytes": 528084,
+      "sha256": "d5230b7d223385f63e4a8b52c5084a448a3d567113d05ff16582d03f16b99aa0"
+    },
+    {
+      "path": "docs/media/dvl_dropout_sonar.png",
+      "bytes": 46073,
+      "sha256": "1793a6ece9ab2d997100457f71296a262d8019f4e7e178d5c4978c9b32ee9367"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+# Times and durations are simulation seconds. Omit duration for a permanent fault.
+faults:
+  - type: dvl_dropout
+    t_start: 0.5
+    duration: 1.0
+  - type: compass_disturbance
+    t_start: 1.0
+    duration: 0.5
+    params:
+      offset_deg: 30

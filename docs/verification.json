@@ -1,0 +1,73 @@
+{
+  "valid": true,
+  "verified_at": "2026-10-27T00:06:31.178934+06:00",
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "platform": "linux",
+  "packages": {
+    "mujoco-marine-sim": "0.1.0",
+    "mujoco": "3.17.0",
+    "numpy": "2.2.6",
+    "Pillow": "12.3.0",
+    "PyYAML": "6.0.3",
+    "pytest": "8.4.2"
+  },
+  "source_install_tests": {
+    "passed": 27,
+    "wall_s": 5.48
+  },
+  "isolated_wheel_tests": {
+    "passed": 27,
+    "wall_s": 4.17
+  },
+  "wheel_import_path": "/tmp/marine_sim_repo_setup_20261026/wheel-venv/lib/python3.10/site-packages/auv_marine_sim/__init__.py",
+  "wheel_config_path": "/tmp/marine_sim_repo_setup_20261026/wheel-venv/lib/python3.10/site-packages/auv_marine_sim/config/sim.yaml",
+  "original_workspace_packages_absent": {
+    "rclpy": true,
+    "ament_index_python": true,
+    "auv_agents": true,
+    "auv_onboard": true,
+    "auv_mission_planner": true
+  },
+  "no_graphics_physics_cli": {
+    "valid": true,
+    "command": "marine-sim run --seconds .2 --seed 3 --output <empty-directory>",
+    "output": {
+      "output": "/tmp/marine_sim_repo_setup_20261026/final_wheel_run",
+      "simulated_seconds": 0.2,
+      "fault_events": 0
+    }
+  },
+  "wheel_payload_matches_tested_source": true,
+  "source_distribution": {
+    "path": "dist/mujoco_marine_sim-0.1.0.tar.gz",
+    "sha256": "50263a89af0c7370181c33a9982c0eb7925b81ab635fcec173a5e00ded6e0758"
+  },
+  "wheel": {
+    "path": "dist/mujoco_marine_sim-0.1.0-py3-none-any.whl",
+    "sha256": "17f03b3ddd42526b9a730376d62c928e39c72a05fed79a765ee12ecfd36aa66d"
+  },
+  "demos": {
+    "scenarios": 4,
+    "recorded_frames": 84,
+    "decoded_gifs": 4
+  },
+  "original_component_source_unchanged": true,
+  "unchanged_core_modules": [
+    "sim.py",
+    "faults.py",
+    "referee.py",
+    "sonar_image.py",
+    "autolabel.py"
+  ],
+  "git_repository_initialized": false,
+  "ci": {
+    "configured": true,
+    "remote_execution_verified": false,
+    "local_render_backend": "egl",
+    "ci_render_backend": "osmesa",
+    "ci_python_matrix": [
+      "3.10",
+      "3.12"
+    ]
+  }
+}

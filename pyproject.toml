@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mujoco-marine-sim"
+version = "0.1.0"
+description = "A configurable MuJoCo underwater vehicle simulator with noisy sensors, scheduled faults and automatic labels."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Yaad Kamrul Bari", email = "yaadbari21@gmail.com"}]
+dependencies = [
+    "mujoco>=3.3,<4",
+    "numpy>=1.24,<3",
+    "PyYAML>=6,<7",
+    "Pillow>=10,<13",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4,<9", "build>=1.2", "wheel"]
+
+[project.scripts]
+marine-sim = "auv_marine_sim.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+auv_marine_sim = ["config/*.yaml", "config/arenas/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

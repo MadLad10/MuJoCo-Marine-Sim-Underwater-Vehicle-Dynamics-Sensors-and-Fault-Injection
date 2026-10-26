@@ -1,0 +1,10 @@
+# Stand-in RoboSub-like pool. World frame: x forward along the pool, y left, z up, z=0 is the water surface.
+# depth (positive down) = -z.  This file is the single source of truth for the world SDF and ground truth.
+world_name: pool
+pool: {length: 30.0, width: 20.0, depth: 5.0, x_min: -5.0}
+start: {x: 0.0, y: 0.0, z: -0.3, yaw: 0.0}
+objects:
+  - {id: gate, class: gate, x: 8.0, y: 0.0, z: -1.5, yaw: 0.0, width: 2.0, height: 1.2}
+  - {id: red_buoy, class: red_buoy, x: 14.0, y: -2.0, z: -1.5, radius: 0.2}
+  - {id: green_buoy, class: green_buoy, x: 14.0, y: 2.0, z: -1.5, radius: 0.2}
+  - {id: yellow_buoy, class: yellow_buoy, x: 18.0, y: 0.0, z: -2.0, radius: 0.2}
