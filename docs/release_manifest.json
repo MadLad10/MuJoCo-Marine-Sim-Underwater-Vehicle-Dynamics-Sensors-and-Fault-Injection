@@ -23,8 +23,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6234,
-      "sha256": "beb562468955f657500b4b977324da3aeece61a066efe4a0bbad875d87c2743d"
+      "bytes": 14894,
+      "sha256": "4ff5ccc1fae02376244e9c655c32aaccccb20112bd348e5cbb0ca5b64cecce9d"
     },
     {
       "path": "docs/DEMOS.md",
@@ -222,6 +222,6 @@
       "sha256": "e168aecb0e3031fdf33e804699573fbf8d464ba5cb4d6796a258887aec0c9000"
     }
   ],
-  "total_bytes": 10473399,
+  "total_bytes": 10482059,
   "self_hash_excluded": true
 }
